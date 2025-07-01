@@ -1,0 +1,91 @@
+openapi: 3.0.1
+info:
+  title: Finance Asset Physical
+  description: Finance Asset Physical Api
+  version: '1.0'
+servers:
+  - url: https://connecttoazure.azure-api.net/finance-asset-physical
+paths:
+  '/communicationManagement/v4/communicationMessage/{id}':
+    get:
+      summary: getCommunicationById
+      operationId: 632043cab659899eea1c8c34
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: ''
+      responses:
+        '200':
+          description: 
+    patch:
+      summary: updateCommunicationById
+      operationId: 632043cbfb4cc83e40e8e78e
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: ''
+      responses:
+        '200':
+          description: 
+    delete:
+      summary: deleteCommunicationById
+      operationId: 632043cba5b2c375eef470cf
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: ''
+      responses:
+        '200':
+          description: 
+  /communicationManagement/v4/communicationMessage:
+    post:
+      summary: createCommunication
+      operationId: 632043cbda72ddc9a7cd0776
+      responses:
+        '200':
+          description: 
+    get:
+      summary: getAllCommunication
+      operationId: 632043cca2847611c07e4996
+      responses:
+        '200':
+          description: 
+  '/communicationManagement/v4/hub/{id}':
+    delete:
+      summary: deleteHubById
+      operationId: 632043cc39ee7cadf2dd90f0
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: ''
+      responses:
+        '200':
+          description: 
+  /communicationManagement/v4/hub:
+    post:
+      summary: createHub
+      operationId: 632043cb1d2ebb8bed8e9e94
+      responses:
+        '200':
+          description: 
+components:
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]
